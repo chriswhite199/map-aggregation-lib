@@ -9,22 +9,22 @@ represented in a small domain set.
 
 To demonstrate this, take the input line "Bob had had a bad day". The standard mapper would output 6 tokens:
 
-  Bob	1
-  had	1
-  had	1
-  a	1
-  bad	1
-  day	1
+    Bob 1
+    had 1
+    had 1
+    a   1
+    bad 1
+    day 1
 
 The efficiency of this mapper can be improved by using map-side aggregation and performing some of the 
 word-counting in the mapper. This reduces the amount of data written by the mapper to disk, and subsequently
 data moved through the shuffle and reduce stages:
 
-  Bob	1
-  had	2
-  a	1
-  bad	1
-  day	1
+    Bob 1
+    had 2
+    a   1
+    bad 1
+    day 1
 
 While this is a small example, you can imagine a typical corpus of text probably only contains 1,000's of 
 unique words. The frequency counts of these words can therefore be maintainted in an in-memory map of <Text,
