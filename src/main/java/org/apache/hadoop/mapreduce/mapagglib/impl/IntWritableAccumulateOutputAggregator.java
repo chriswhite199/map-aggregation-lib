@@ -15,11 +15,10 @@ import org.apache.hadoop.mapreduce.Mapper;
 public class IntWritableAccumulateOutputAggregator<K> extends
         AbstractAccumulateOutputAggregator<K, IntWritable> {
 
-    protected IntWritableAccumulateOutputAggregator(
+    public IntWritableAccumulateOutputAggregator(
             Mapper<?, ?, K, IntWritable>.Context context,
-            Comparator<K> keyComparator, Class<K> keyClz,
-            Class<IntWritable> valueClz, int maxBufferSize) {
-        super(context, keyComparator, keyClz, valueClz, maxBufferSize);
+            Comparator<K> keyComparator, Class<K> keyClz, int maxBufferSize) {
+        super(context, keyComparator, keyClz, IntWritable.class, maxBufferSize);
     }
 
     @Override

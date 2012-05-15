@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.Comparator;
 
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.mapagglib.AbstractListBackedOutputAggregator;
 import org.apache.hadoop.mapreduce.mapagglib.AbstractOutputAggregator;
-import org.apache.hadoop.mapreduce.Mapper;
 
 /**
  * Implementation of the {@link AbstractOutputAggregator} which accumulates a
@@ -20,9 +20,9 @@ public class IntWritableSummationListBackedOutputAggregator<K> extends
 
     public IntWritableSummationListBackedOutputAggregator(
             Mapper<?, ?, K, IntWritable>.Context context,
-            Comparator<K> keyComparator, Class<K> keyClz,
-            Class<IntWritable> valueClz, int maximumBufferSize) {
-        super(context, keyComparator, keyClz, valueClz, maximumBufferSize);
+            Comparator<K> keyComparator, Class<K> keyClz, int maximumBufferSize) {
+        super(context, keyComparator, keyClz, IntWritable.class,
+                maximumBufferSize);
     }
 
     @Override

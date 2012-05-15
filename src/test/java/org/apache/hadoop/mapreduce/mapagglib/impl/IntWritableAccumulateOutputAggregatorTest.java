@@ -24,8 +24,7 @@ public class IntWritableAccumulateOutputAggregatorTest {
                 .getMockContext();
 
         IntWritableAccumulateOutputAggregator<Text> textAggregator = new IntWritableAccumulateOutputAggregator<Text>(
-                context, new Text.Comparator(), Text.class, IntWritable.class,
-                10000);
+                context, new Text.Comparator(), Text.class, 10000);
 
         textAggregator.aggregate(new Text("A"), new IntWritable(1));
         textAggregator.aggregate(new Text("A"), new IntWritable(2));
@@ -52,8 +51,7 @@ public class IntWritableAccumulateOutputAggregatorTest {
                 .getMockContext();
 
         IntWritableAccumulateOutputAggregator<Text> textAggregator = new IntWritableAccumulateOutputAggregator<Text>(
-                context, new Text.Comparator(), Text.class, IntWritable.class,
-                2);
+                context, new Text.Comparator(), Text.class, 2);
 
         textAggregator.aggregate(new Text("A"), new IntWritable(1));
         textAggregator.aggregate(new Text("A"), new IntWritable(2));

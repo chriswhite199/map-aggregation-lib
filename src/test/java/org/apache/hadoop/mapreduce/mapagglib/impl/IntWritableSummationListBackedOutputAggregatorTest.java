@@ -24,8 +24,7 @@ public class IntWritableSummationListBackedOutputAggregatorTest {
                 .getMockContext();
 
         IntWritableSummationListBackedOutputAggregator<Text> textAggregator = new IntWritableSummationListBackedOutputAggregator<Text>(
-                context, new Text.Comparator(), Text.class, IntWritable.class,
-                10000);
+                context, new Text.Comparator(), Text.class, 10000);
 
         textAggregator.aggregate(new Text("A"), new IntWritable(1));
         textAggregator.aggregate(new Text("A"), new IntWritable(2));
@@ -52,8 +51,7 @@ public class IntWritableSummationListBackedOutputAggregatorTest {
                 .getMockContext();
 
         IntWritableSummationListBackedOutputAggregator<Text> textAggregator = new IntWritableSummationListBackedOutputAggregator<Text>(
-                context, new Text.Comparator(), Text.class, IntWritable.class,
-                2);
+                context, new Text.Comparator(), Text.class, 2);
 
         textAggregator.aggregate(new Text("A"), new IntWritable(1));
         textAggregator.aggregate(new Text("A"), new IntWritable(2));
@@ -69,8 +67,7 @@ public class IntWritableSummationListBackedOutputAggregatorTest {
         Assert.assertEquals(5, outputs.size());
 
         Assert.assertEquals(new Text("A"), outputs.get(0).getFirst());
-        Assert.assertEquals(new IntWritable(1 + 2), outputs.get(0)
-                .getSecond());
+        Assert.assertEquals(new IntWritable(1 + 2), outputs.get(0).getSecond());
 
         Assert.assertEquals(new Text("A"), outputs.get(1).getFirst());
         Assert.assertEquals(new IntWritable(4), outputs.get(1).getSecond());
@@ -80,7 +77,7 @@ public class IntWritableSummationListBackedOutputAggregatorTest {
 
         Assert.assertEquals(new Text("B"), outputs.get(3).getFirst());
         Assert.assertEquals(new IntWritable(2), outputs.get(3).getSecond());
-        
+
         Assert.assertEquals(new Text("C"), outputs.get(4).getFirst());
         Assert.assertEquals(new IntWritable(1), outputs.get(4).getSecond());
     }
