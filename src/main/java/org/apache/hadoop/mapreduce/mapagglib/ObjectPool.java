@@ -1,4 +1,4 @@
-package org.apache.hadoop.mapreduce;
+package org.apache.hadoop.mapreduce.mapagglib;
 
 import java.util.ArrayList;
 

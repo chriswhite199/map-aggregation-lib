@@ -1,11 +1,11 @@
-package org.apache.hadoop.mapreduce.impl;
+package org.apache.hadoop.mapreduce.mapagglib.impl;
 
 import java.io.IOException;
 import java.util.Comparator;
 
 import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.mapreduce.AbstractListBackedOutputAggregator;
-import org.apache.hadoop.mapreduce.AbstractOutputAggregator;
+import org.apache.hadoop.mapreduce.mapagglib.AbstractListBackedOutputAggregator;
+import org.apache.hadoop.mapreduce.mapagglib.AbstractOutputAggregator;
 import org.apache.hadoop.mapreduce.Mapper;
 
 /**

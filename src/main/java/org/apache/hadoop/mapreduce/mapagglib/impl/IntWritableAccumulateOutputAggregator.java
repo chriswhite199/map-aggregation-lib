@@ -1,9 +1,9 @@
-package org.apache.hadoop.mapreduce.impl;
+package org.apache.hadoop.mapreduce.mapagglib.impl;
 
 import java.util.Comparator;
 
 import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.mapreduce.AbstractAccumulateOutputAggregator;
+import org.apache.hadoop.mapreduce.mapagglib.AbstractAccumulateOutputAggregator;
 import org.apache.hadoop.mapreduce.Mapper;
 
 /**

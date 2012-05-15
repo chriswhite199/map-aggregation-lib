@@ -1,4 +1,4 @@
-package org.apache.hadoop.mapreduce.impl;
+package org.apache.hadoop.mapreduce.mapagglib.impl;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,9 +1,10 @@
-package org.apache.hadoop.mapreduce;
+package org.apache.hadoop.mapreduce.mapagglib;
 
 import java.io.IOException;
 import java.util.Comparator;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.mapreduce.Mapper;
 
 public abstract class AbstractOutputAggregator<K, V> {
     /** Configuration */

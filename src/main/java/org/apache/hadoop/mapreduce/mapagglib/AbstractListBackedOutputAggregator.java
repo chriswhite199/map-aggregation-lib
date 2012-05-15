@@ -1,4 +1,4 @@
-package org.apache.hadoop.mapreduce;
+package org.apache.hadoop.mapreduce.mapagglib;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
+import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.util.ReflectionUtils;
 
 /**
